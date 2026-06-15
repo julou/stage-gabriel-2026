@@ -49,10 +49,10 @@ Les deux notebooks *complet* servent de corrigé et peuvent être partagés en f
 |---|---|---|---|
 | **Lun S1** | Introduction : présentation labo, règles de sécurité. Pipetage : dilutions en série ×10 sur 6 ordres de grandeur, vérification au spectro. Inoculation de 6 tubes LB ±stérile (vérification contamination le lendemain). | Inoculation tubes LB + glucose 0,2 % pour courbe de croissance manuelle démarrant **Mar matin**. | Setup Colab (ou VS Code). Notebook A §A1 : multiplication répétée, tracé linéaire, échelle log, temps de doublement graphique |
 | **Mar S1** | Lecture OD600 toutes les 30 min de ~9h30 à ~16h (6 mesures min, 2×1h puis 4×30 min puis toutes les 20 min). Tubes LB + glucose 3 concentrations.  Vérification contamination des tubes du lundi. | Lecture OD suite. Préparation inoculum pour plaque reader (mercredi matin). | Notebook A §A2 : `simulate_one`, 1 trajectoire. 30 trajectoires, moyenne, variance. Pendant les pauses de 20 min. |
-| **Mer S1** | Inoculation plaque reader : glucose ×3 (0,02 % / 0,2 % / 0,4 %) × 2 réplicats + lactose ×2 (0,2 % / 0,4 %) × 2 réplicats + glu+lac ×2 × 2 réplicats + blancs → **diauxie overnight**. | Lancement plate reader, vérification lecture. | Notebook A §A3 : Monod, courbe p(S), `simulate_nutrients`. Vérification N_max ∝ [glucose] avec données Mar S1. |
+| **Mer S1** | Inoculation plaque reader : glucose ×3 (0,02 % / 0,2 % / 0,4 %) × 2 réplicats + lactose ×2 (0,02 % / 0,2 %) × 2 réplicats + glu+lac ×2 × 2 réplicats + blancs → **diauxie overnight**. | Lancement plate reader, vérification lecture. | Notebook A §A3 : Monod, courbe p(S), `simulate_nutrients`. Vérification N_max ∝ [glucose] avec données Mar S1. |
 | **Jeu S1** | Lecture données diauxie (arrêt le matin). Discussion avec Thomas : qu'est-ce que la diauxie dit sur la régulation de *lacZ* ? **TSS transformation** pUA66-lacUV5 → MG1655 : préparation cellules compétentes AM, transformation + incubation 1h + plating fin de matinée sur LB + Kan50. | | Notebook A §A3 fin : `simulate_nutrients` avec paramètres variés. §A4 début : import données diauxie plate reader, visualisation. |
 | **Ven S1** | Vérification colonies de transformation. Si OK (>10 colonies, fond propre) : pick 2–3 colonies → LB + Kan50 overnight pour glycérol + préculture. Si échec : redo ou utiliser stock glycérol existant. | Fin de journée : observation des colonies au microscope à faible grossissement (optionnel, pédagogique). | Notebook A §A4 : comparaison Monod vs données. |
-| **Sam–Dim S2** | *(Thomas)* Dimanche soir : inoculer 3 mL M9 0,2 % arabinose + Kan50 depuis glycérol Plac-GFP **et** colonie/glycérol pUA66-lacUV5/MG1655. Overnight 37 °C. | — | — |
+| **Sam–Dim S2** | *(Thomas)* Dimanche soir : inoculer 3 mL M9 + glycérol 0,4 % + Kan50 depuis glycérol Plac-GFP **et** colonie/glycérol pUA66-lacUV5/MG1655. Overnight 37 °C. | — | — |
 | **Lun S2** | préparation plaque d'induction et lancement plate reader (≥6h de cinétique).  | Lancement plate reader induction : Plac-GFP vs pUA66-lacUV5/MG1655 × IPTG (6 conc.) × TMG (6 conc.) × 2 réplicats. |  Notebook B §B1 début. |
 | **Mar S2** | Lecture plate reader le matin. Évaluation des données : courbes propres ? oui → **microscopie PM** (agar pads, 2 souches, 4 [TMG]). non → redo + analyse. | Si microscopie PM : préparation agar pads, mise en place échantillons, acquisition phase + fluorescence. | §B1 fin. §B2 : Hill n=1 vs n=2. Si redo : §B3 début (import données plaque reader). |
 | **Mer S2** | Si microscopie déjà faite → **ImageJ** (segmentation cellules, mesure Mean, export CSV). Si pas encore → session microscopie. | ImageJ suite / vérification données. | §B3 : normalisation RFU/OD, courbes dose-réponse, fit graphique K_half. Superposition courbe de Hill. |
@@ -100,7 +100,7 @@ relie le notebook croissance (τ-leaping) au notebook induction (interrupteur st
 
 ### Dimanche S2 (obligatoire)
 
-- [ ] Inoculer Plac-GFP/MG1655 : 1 colonie ou 5 µL glycérol → 3 mL M9 0,2 % arabinose + Kan50, overnight 37 °C.
+- [ ] Inoculer Plac-GFP/MG1655 : 1 colonie ou 5 µL glycérol → 3 mL M9 + glycérol 0,4 % + Kan50, overnight 37 °C.
 - [ ] Inoculer pUA66-lacUV5/MG1655 : même chose depuis colonie Ven S1 (ou glycérol).
 
 ---

@@ -17,7 +17,7 @@
 - LB liquide stérile
 - Colorant (bleu de bromophénol ou rouge de Congo à 0,1 % dans eau — pour visualiser les dilutions)
 - Tubes de croissance 14 mL × 6 (3 stériles, 3 non stériles), bouchons
-- Préculture *E. coli* MG1655 overnight en LB (OD ~2–4)
+- Boite de petri avec colonies (*E. coli* MG1655).
 
 ### Matin — pipetage et dilutions
 
@@ -31,17 +31,29 @@
 
 4. Préparer 6 tubes de 14 mL avec 3 mL LB chacun :
    - Tubes A1, A2 : inoculer 30 µL préculture (dilution 1:100), **avec** technique stérile (brûlage bec Bunsen ou hotte).
-   - Tubes B1, B2 : inoculer 30 µL préculture, **sans** précautions stériles (manipulations à l'air libre, pas de flambeau).
-   - Tubes C1, C2 : **non inoculés** (témoins stérilité — pas de bactéries ajoutées).
+   - Tubes B1, B2 : non inoculés, **avec** technique stérile (témoins stérilité — pas de bactéries ajoutées).
+   - Tubes C1, C2 : non inoculés, **sans** technique stérile  (témoins stérilité — pas de bactéries ajoutées).
+   [OPTIONNEL] toucher furtivement le cône pour B2.
    - Incuber overnight 37 °C, 200 rpm.
-   - **Lire le résultat mardi matin (T+0 de la courbe de croissance)** : turbidité dans A (attendu), B (attendu), C (non attendu) ?
+   - **Lire le résultat mardi matin** : turbidité dans A (attendu), B (non attendu), C (attendu ou non) ?
 
-5. Préparer les tubes pour la **courbe de croissance manuelle de mardi** :
-   - 3 × 3 tubes de 14 mL : LB + glucose 0,02 % / 0,2 % / 0,4 % (3 mL chacun).
-   - Inoculer 30 µL préculture dans chaque tube.
-   - Démarrer la mesure mardi matin à 8h30 ou dès l'arrivée.
+5. Préparer une culture pour la **courbe de croissance manuelle de mardi** ("culture de nuit"), avec technique stérile :
+   - 2 tubes de 14 mL : milieu minimum M9 + glucose 0,2 % (3 mL).
+   - Inoculer un tube avec une colonie – le second tube est un controle de stérilité.
+   - Incuber overnight 37 °C, 200 rpm.
+
+6. Préparer les flasques pour les **courbe de croissance manuelle de mardi** :
+   - 4 flasques (erlenmeyer) de 250 mL : milieu minimum M9 + glucose 0,02 % / 0,2 % / 0,4 % et LB (50 mL chacun).
+   - Le mardi matin dès l'arrivée, inoculer avec la "culture de nuit" et démarrer la mesure.
 
 > **Point pédagogique** : expliquer pourquoi on travaille stérilement et ce que "stérile" signifie vraiment.
+
+### Programmation — Notebook A §A1
+
+**Quand** : après l'inoculation des tubes (≈ 15h–17h).
+
+§A1 complet : multiplication répétée, tracé linéaire et logarithmique, lecture graphique du temps de doublement.
+Durée estimée : 1h–1h30. Pas de pression — si le temps manque, §A1 peut déborder sur les pauses de mardi.
 
 ---
 
@@ -50,12 +62,15 @@
 **Objectif** : mesurer une courbe de croissance bactérienne à la main, comprendre la phase de latence, la phase exponentielle, et la phase stationnaire.
 
 ### Matériel
-- 9 tubes de 14 mL inoculés lundi soir
+- 4 flasques de 250 mL inoculés lundi soir
 - Spectrophotomètre OD600
 - Cuvettes jetables
-- Feuille de papier millimétré ou tableur pour noter les mesures
+- Feuille de papier millimétré et/ou tableur pour noter les mesures
 
 ### Protocole de mesure
+
+- Inoculer les 3 flasques avec milieu minimum M9 avec la culture de nuit, dilution 1:100. Commencer les mesures et incuber overnight 37 °C, 200 rpm.
+- Après 2h, inoculer la flasque avec LB avec la culture de nuit, dilution 1:200. Inclure dans les mesures à partir de ce point et incuber overnight 37 °C, 200 rpm.
 
 | Heure | Mesure |
 |---|---|
@@ -70,79 +85,104 @@
 | … | … toutes les 20 min jusqu'à ~16h … |
 | T+≈6h30 | Dernière mesure de la journée |
 
-- Mesure OD : vider 1 mL de culture dans une cuvette, lire à 600 nm, noter.
-- Blanc : LB seul sans bactéries (préparer 1 tube blanc par concentration de glucose).
-- Si OD > 0,8 : diluer 1:2 dans LB avant mesure, multiplier la valeur lue par 2.
+NB: augmenter la frequence de mesure (après 1 h) pour la condition LB.
+
+- Mesure OD : pipetter 1 mL de culture dans une cuvette, lire à 600 nm, tourner la cuvette de 180º et lire à nouveau noter les 2 valeurs. Attention aux bulles!
+- Blanc : LB seul ou milieu minimum M9 seul sans bactéries (préparer 1 tube blanc par concentration de glucose).
+- Si OD > 0,8 : diluer 1:5 dans le milieu correspondant avant mesure, multiplier la valeur lue par 5.
 
 ### Notation recommandée
 
 ```
-temps_min, glu_002pct_r1, glu_002pct_r2, glu_002pct_r3, glu_02pct_r1, ...
-0, 0.05, 0.05, 0.06, 0.05, ...
-20, 0.07, 0.07, 0.08, 0.09, ...
+temps_min, glu_002, glu_02, glu_04, LB
+0,    0.05, 0.05, 0.05, (mesures LB démarrent à T+120 min)
+60,   0.06, 0.07, 0.08,
+120,  0.09, 0.12, 0.15, 0.05
+...
 ```
+NB : 1 flasque par condition. Les réplicats seront faits lors de l'expérience en plaque reader (J3).
 
 Sauvegarder en `.csv` — sera chargé dans le Notebook A §A4.
 
 ### Points d'attention
-- Les tubes 0,02 % glucose seront en phase stationnaire bien avant les autres.
+- Les valeurs vont augmenter plus tôt et beaucoup plus vite pour la flasque avec LB – c'est pour ça qu'on l'inocule plus tard.
+- La flasque 0,02 % glucose seront en phase stationnaire bien avant les autres flasques avec milieu minimum M9.
 - Si l'OD ne monte pas après 2h : vérifier que les cultures ont été inoculées.
-- La phase de latence peut durer 30–60 min selon l'état de la préculture.
+- La phase de latence peut durer 30 min ou plusieurs heures selon l'état de la préculture et la dilution de la culture de nuit.
+
+
+### Programmation — Notebook A §A2
+
+**Quand** : pendant les pauses entre les mesures OD (20–30 min chacune).
+
+§A2 : `simulate_one` (une trajectoire stochastique), puis 30 trajectoires, moyenne, variance.
+Ne pas interrompre les mesures pour la programmation — avancer au rythme des pauses.
+
+---
+
+### Préparation pour Mercredi
+- Préparer une culture pour la **courbe de croissance pour la manip en plaque reader** ("culture de nuit"), avec technique stérile – cf point 5 de Lundi après-midi.
 
 ---
 
 ## J3 — Mercredi S1 · Plaque reader diauxie (overnight)
 
-**Objectif** : observer la croissance sur deux sources de carbone simultanément, mettre en évidence la diauxie.
+**Objectif** : comparer la croissance sur différents nutriments (sources de carbone); observer la croissance sur deux sources de carbone mélangées – mettre en évidence la diauxie.
 
 ### Matériel
 - Plaque 96 puits noire à fond transparent (pour fluorescence future) ou fond plat transparent
-- LB liquide stérile
+- M9 Minimal Salts 5× (Difco) + glycérol 50 % + MgSO₄ 1 M (voir Annexe 1)
 - Glucose 20 % stock stérile (autoclavé ou filtré)
 - Lactose 20 % stock stérile
-- Préculture MG1655 overnight en LB (OD ~2–4)
+- Préculture *E. coli* MG1655 overnight en M9 + glycérol 0,4 % (OD ~1–2)
 - Parafilm
 
 ### Préparation des milieux (volumes finaux 200 µL/puits)
 
 | Condition | Concentration finale | Stock utilisé |
 |---|---|---|
-| Glucose seul | 0,02 % / 0,2 % / 0,4 % | Glucose 20 % : 0,2 µL / 2 µL / 4 µL dans 200 µL LB |
-| Lactose seul | 0,2 % / 0,4 % | Lactose 20 % : 2 µL / 4 µL dans 200 µL LB |
-| Glu 0,2 % + Lac 0,2 % | 0,2 % chacun | 2 µL glu + 2 µL lac dans 200 µL LB |
-| Glu 0,4 % + Lac 0,4 % | 0,4 % chacun | 4 µL glu + 4 µL lac dans 200 µL LB |
-| Blanc (LB seul) | — | LB pur |
+| Glucose seul | 0,02 % / 0,2 % / 0,4 % | Glucose 20 % : 0,2 µL / 2 µL / 4 µL dans 200 µL M9 |
+| Lactose seul | 0,02% / 0,2 % | Lactose 20 % : 0.2 µL / 2 µL dans 200 µL M9 |
+| Glu 0,02 % + Lac 0,2 % |   | 0.2 µL glu + 2 µL lac dans 200 µL M9 |
+| Glu 0,2 % + Lac 0,2 % |   | 2 µL glu + 2 µL lac dans 200 µL M9 |
+| Blanc (M9 seul) | — | M9 pur |
 
 ### Layout de la plaque diauxie
 
+Règle : laisser Row A, Row F–H et Col 1, Col 5 (séparateur), Col 9–12 vides.
+Chaque condition : 3 réplicats en colonnes consécutives.
+
 ```
-        Col 1       Col 2       Col 3       Col 4       Col 5       Col 6       Col 7–12
-Row A   Glu 0.02%   Glu 0.02%   Glu 0.02%   Glu 0.2%    Glu 0.2%    Glu 0.2%    …
-Row B   Glu 0.4%    Glu 0.4%    Glu 0.4%    Lac 0.2%    Lac 0.2%    Lac 0.4%    …
-Row C   Lac 0.4%    GluLac0.2%  GluLac0.2%  GluLac0.4%  GluLac0.4%  Blanc       …
-Row D–H Inutilisés (laisser vides ou remplir avec LB pour évaporation)
+           Col 1   Col 2        Col 3        Col 4       Col 5   Col 6             Col 7             Col 8        Col 9–12
+Row A      vide    vide         vide         vide        vide    vide              vide              vide         vide
+Row B      vide    Glu 0,02 %   Glu 0,02 %   Glu 0,02 %  vide    Lac 0,02 %        Lac 0,02 %        Lac 0,02 %   vide
+Row C      vide    Glu 0,2 %    Glu 0,2 %    Glu 0,2 %   vide    Lac 0,2 %         Lac 0,2 %         Lac 0,2 %    vide
+Row D      vide    Glu 0,4 %    Glu 0,4 %    Glu 0,4 %   vide    Glu0,02+Lac0,2 %  Glu0,02+Lac0,2 %  Glu0,02+Lac0,2 %  vide
+Row E      vide    Blanc M9     Blanc M9     Blanc M9    vide    Glu0,2+Lac0,2 %   Glu0,2+Lac0,2 %   Glu0,2+Lac0,2 %   vide
+Row F–H    vide    vide         vide         vide        vide    vide              vide              vide         vide
 ```
 
-> **[À ADAPTER]** selon le nombre de réplicats souhaités et la disponibilité de la plaque.
-> Minimum recommandé : 2 réplicats par condition + 2 blancs.
+8 conditions × 3 réplicats = 24 puits. Blancs en Row E Col 2–4.
 
 ### Protocole d'inoculation
 
-1. Préparer une dilution 1:100 de la préculture dans LB (OD ~0,02–0,05).
-2. Distribuer 190 µL de milieu (LB + glucose/lactose aux concentrations finales) dans chaque puits.
-3. Ajouter 10 µL de la préculture diluée dans chaque puits (inoculum final ~0,002–0,005 OD).
+1. Préparer une dilution 1:20 de la culture de nuit (OD ~0,02–0,05) dans 5 mL de milieu minimum M9.
+2. Distribuer 195 µL de milieu (M9 + glucose/lactose aux concentrations finales) dans chaque puits.
+3. Ajouter 5 µL de la préculture diluée dans chaque puits (inoculum final ~0,002–0,005 OD).
 4. Couvrir avec un couvercle ou du Parafilm perforé.
 5. Lancer le plate reader :
    - 37 °C, agitation orbitale forte (300 rpm ou "normal")
-   - Lecture OD600 toutes les 5 min
-   - Durée : 14–18h (overnight)
+   - Lecture OD600 toutes les 3 min
+   - Durée : 30h maximum — interrompre dès que toutes les conditions ont atteint la phase stationnaire.
 
-### Paramètres plate reader BioTek [À VÉRIFIER]
-- Lecture OD600 : filtre 600 nm
-- Agitation : orbitale, 5 sec avant lecture
-- Température : 37 °C
-- Intervalle : 5 min
-- Durée totale : 900 min (15h) ou overnight
+
+### Programmation — Notebook A §A3
+
+**Quand** : après le lancement du plate reader (≈ 14h–17h).
+
+§A3 : modèle de Monod, courbe p(S), `simulate_nutrients`.
+Si les données de mardi sont disponibles : commencer la vérification N_max ∝ [glucose].
+Durée estimée : 2h.
 
 ---
 
@@ -150,14 +190,9 @@ Row D–H Inutilisés (laisser vides ou remplir avec LB pour évaporation)
 
 **Objectif** : analyser les données de la nuit et introduire la transformation bactérienne.
 
-### Matin — lecture et discussion diauxie
+### Matin — Transformation TSS (pUA66-lacUV5 → MG1655)
 
-1. Arrêter le plate reader (ou laisser tourner jusqu'à lecture).
-2. Exporter les données en `.txt` (format BioTek Gen5 — voir Notebook A §A4 pour le parsing).
-3. Discussion avec le stagiaire : quels puits montrent un "creux" dans la courbe OD ? Pourquoi ?
-   Relier à la régulation de l'opéron *lac* : la bactérie attend l'épuisement du glucose avant d'induire *lacZ*.
-
-### Après-midi — Transformation TSS (pUA66-lacUV5 → MG1655)
+Le protocole detaillé sera communiqué par Thomas.
 
 #### Préparation des cellules compétentes TSS
 
@@ -194,35 +229,57 @@ Row D–H Inutilisés (laisser vides ou remplir avec LB pour évaporation)
 - Tube "+ADN contrôle" : plasmide connu (ex. Plac-GFP existant) → doit donner des colonies.
 
 ### Points d'attention
-- L'incubation de récupération (étape 8, 1h) est le bon moment pour §A3 du Notebook A.
+- L'incubation de récupération (étape 8, 1h) est le bon moment pour la programmation (voir bloc ci-dessous).
 - Si aucune colonie vendredi : utiliser le stock glycérol de pUA66-lacUV5/MG1655 existant (si disponible) ou redo.
 
+
+### Programmation — Notebook A §A3 fin + §A4 début
+
+**Quand** : pendant l'incubation de récupération post-transformation (étape 8 — 1h).
+
+§A3 fin : `simulate_nutrients` avec paramètres variés.
+§A4 début : import des données diauxie, premier tracé.
+
+---
+
+### Après-midi — lecture et discussion diauxie
+
+1. Arrêter le plate reader.
+2. Exporter les données en `.txt` (format BioTek Gen5 — voir Notebook A §A4 pour le parsing).
+3. Discussion avec le stagiaire : quels puits montrent un "creux" dans la courbe OD ? Pourquoi ?
+   Relier à la régulation de l'opéron *lac* : la bactérie attend l'épuisement du glucose avant d'induire *lacZ*.
+4. Analyse des données diauxie (J3) : visualisation, identification du creux de diauxie.
 ---
 
 ## J5 — Vendredi S1 · Vérification transformation + analyse données
 
-**Objectif** : vérifier les résultats de la transformation, pick des colonies, préparer la semaine 2.
+**Objectif** : vérifier les résultats de la transformation, finaliser l'analyse de données, préparer la semaine 2.
+
+Et refaire une des experiences si necessaire.
 
 ### Matin
 
 1. **Compter les colonies** : attendu > 10 sur "+ADN", < 2 sur "−ADN".
-2. **Pick 2–3 colonies** Kan-résistantes dans 3 mL LB + Kan50. Incuber overnight.
+2. **Pick 2–3 colonies** Kan-résistantes dans 3 mL LB + Kan50. Incuber overnight pour preparation d'un stock glycérol.
 3. **[OPTIONNEL]** Spot d'induction rapide : étaler une colonie sur LB + Kan50 + IPTG 100 µM.
    Fluorescence visible sous lampe UV (312 nm) le lendemain si la transformation a fonctionné.
+4. Comparer les courbes de croissance manuelles (J2) et les mesures automatisées (J3) dans le notebook.
+5. §A4 (suite et fin). Si §A4 terminé : commencer §B1 en option.
 
-### Après-midi
 
-4. Analyse des données de la courbe de croissance manuelle (J2) dans le notebook.
-5. Analyse des données diauxie (J3) : visualisation, identification du creux de diauxie.
-6. Début du Notebook B §B1 si le temps le permet.
+### Programmation — Notebook A §A4
+
+**Quand** : après la vérification des colonies (≈ 10h30 et tout l'après-midi).
+
+§A4 : comparaison simulation Monod vs données plate reader (diauxie incluse).
+Si §A4 est terminé avant la fin de journée : commencer §B1 (interrupteur stochastique, courbe p vs [I]).
 
 ---
 
 ## [Dimanche S2 — Thomas uniquement]
 
 - Inoculer Plac-GFP/MG1655 : 1 colonie fraîche ou 5 µL glycérol → 3 mL M9 0,2 % arabinose + Kan50. Overnight 37 °C, 200 rpm.
-- Inoculer pUA66-lacUV5/MG1655 : même chose depuis colonie de Ven S1.
-- Vérifier que les deux cultures démarrent correctement le lundi matin (OD attendue ~2–4).
+- Inoculer pUA66-lacUV5/MG1655 : même chose depuis 2 colonies de Ven S1 (pour stock glycerol et sequencage).
 
 ---
 
@@ -230,13 +287,7 @@ Row D–H Inutilisés (laisser vides ou remplir avec LB pour évaporation)
 
 **Objectif** : mesurer quantitativement la réponse des deux souches à l'IPTG et au TMG.
 
-### Matin — croissance des cultures
-
-1. Diluer les précultures overnight 1:100 dans LB + Kan50 (ex. 30 µL préculture dans 3 mL LB + Kan50).
-2. Incuber à 37 °C, 200 rpm pendant **2–3h** jusqu'à OD600 ~0,2–0,3 (phase exponentielle).
-3. Pendant ce temps : §A4 du Notebook A (analyse diauxie complète).
-
-### Après-midi — préparation et lancement plaque reader
+### Matin — préparation et lancement lecteur de plaque
 
 #### Préparation des stocks d'inducteurs (voir Annexe 2)
 
@@ -262,14 +313,11 @@ Row A     Plac-GFP (réplicat 1)                | Plac-GFP (réplicat 1)
 Row B     Plac-GFP (réplicat 2)                | Plac-GFP (réplicat 2)
 Row C     lacUV5-GFP (réplicat 1)              | lacUV5-GFP (réplicat 1)
 Row D     lacUV5-GFP (réplicat 2)              | lacUV5-GFP (réplicat 2)
-Row E     Blancs LB + Kan50 (milieu seul)      | Blancs LB + Kan50
+Row E     Blancs M9 + Kan50 (milieu seul)      | Blancs M9 + Kan50
 Row F–H   (vides)
 ```
 
-\* **Colonnes 1 et 7 ([I]=0) = référence autofluorescence.** Ces puits mesurent la
-fluorescence endogène des bactéries (principalement les flavines : FAD, FMN, riboflavine),
-indépendante de la GFP. Ils servent à corriger toutes les autres valeurs RFU/OD
-(voir Notebook B §B3).
+\* **Colonnes 1 et 7 ([I]=0) = référence autofluorescence.** Ces puits mesurent la fluorescence endogène des bactéries (principalement les flavines), indépendante de la GFP. Ils servent à corriger toutes les autres valeurs RFU/OD (voir Notebook B §B3).
 
 Total : 48 puits bactéries + 12 blancs + 36 vides = 96 puits.
 
@@ -277,22 +325,27 @@ Total : 48 puits bactéries + 12 blancs + 36 vides = 96 puits.
 
 1. **Distribuer l'inducteur** : ajouter 2 µL de la dilution de travail correspondante dans chaque puits (commencer par les blancs = 2 µL eau).
    - Utiliser une pipette multicanal (8 canaux) en pipetant par colonnes : Col 1 = eau (conc 0), Col 2 = 100 µM IPTG, etc.
-2. **Distribuer les bactéries** : ajouter 198 µL de culture par puits (dilution 1:100 en LB + Kan50 dans la culture elle-même).
+2. **Distribuer les bactéries** : ajouter 198 µL de culture par puits (dilution 1:1000 des cultures de nuit dans milieu minimum M9 + glycerol 0,4 % + Kan50).
    - Pipette multicanal par rangées : Row A = 198 µL culture Plac-GFP, Row D = 198 µL culture lacUV5-GFP.
-   - Pour les blancs (Row G) : 198 µL LB + Kan50 seul.
+   - Pour les blancs (Row E) : 198 µL M9 + glycérol 0,4 % + Kan50 seul.
 
 #### Paramètres plate reader BioTek [À VÉRIFIER]
 - Lecture OD600 : filtre 600 nm
-- Lecture GFP : excitation 485/20 nm, émission 528/20 nm (ou selon filtre disponible)
-- Agitation : orbitale, 5 sec avant lecture
+- Lecture GFP : excitation 470/20 nm, émission 525/20 nm
+- Agitation : orbitale, 30 sec avant lecture
 - Température : 37 °C
-- Intervalle : 5–10 min
-- Durée : 6–8h
+- Intervalle : 3 min
+- Durée : 30h
 
 > **Lecture autofluorescence** : les colonnes 1 et 7 ([I]=0) mesurent la fluorescence
 > endogène. Pour une correction fiable, s'assurer que ces puits sont en **phase
 > exponentielle** lors de la lecture (OD ~0,1–0,4) — l'autofluorescence par cellule
 > y est stable. Éviter la phase stationnaire où l'état métabolique change.
+
+### Après-midi — Programmation
+
+- Notebook B **§B1** (interrupteur stochastique, courbe p vs [I]).
+- Si avancé : débuter **§B2** (équation de Hill, n=1 vs n=2).
 
 ---
 
@@ -306,28 +359,29 @@ Total : 48 puits bactéries + 12 blancs + 36 vides = 96 puits.
 2. Vérification rapide : courbes OD croissantes ? Signal GFP visible à [IPTG] = 100 µM ?
 3. Vérifier les colonnes 1 et 7 ([I]=0) : RFU/OD stable pendant la phase exponentielle ? C'est la référence autofluorescence pour la correction (Notebook B §B3).
 4. Si données propres → Notebook B §B3 l'après-midi.
-5. Si problème (pas de croissance, signal GFP absent, contamination) → discuter avec Thomas, redo si nécessaire.
+5. Si problème (pas de croissance, signal GFP absent, contamination) → discuter avec Thomas, refaire si nécessaire.
 
 ### Après-midi [FACULTATIF] — Microscopie agar pads
 
-> **Prérequis** : les données de la plaque reader doivent être propres (croissance OK, signal GFP visible).
+> **Prérequis** : les données de la plaque reader doivent être propres (croissance OK, signal GFP visible). Sinon refaire l'experience de Lundi.
+
+#### Préparation des cultures
+
+Préparer 4 conditions TMG pour la culture lacUV5-GFP et pour la culture Plac-GFP en phase exponentielle :
+- [TMG] = 0, 5, 20, 100 µM (tubes Eppendorf séparés, 100 µL chacun)
+- milieu minimum M9 + glycerol 0,4 % + Kan 50.
+- Incuber à 37 °C, 200 rpm.
 
 #### Préparation agar pads
 
-1. Faire fondre 1–2 mL agarose 1 % dans LB (microwave, ~30 sec).
+1. Faire fondre 1–2 mL agarose 1 % dans milieu minimum M9 (microwave, ~30 sec).
 2. Déposer ~30 µL sur une lame de verre. Poser une seconde lame dessus (sandwich).
 3. Laisser solidifier 5 min.
 4. Séparer délicatement les lames : garder la lame avec l'agar pad.
 
-#### Préparation des échantillons
-
-Préparer 4 conditions TMG à partir de la culture lacUV5-GFP (ou Plac-GFP) en phase exponentielle :
-- [TMG] = 0, 5, 20, 100 µM (tubes Eppendorf séparés, 100 µL chacun)
-- Incuber 1h à 37 °C sans agitation.
-
 #### Montage et acquisition
 
-5. Déposer 2 µL de bactéries sur l'agar pad. Couvrir avec une lamelle.
+5. Déposer 2 µL de bactéries sur l'agar pad. Laisser evaporer la goutte. Couvrir avec une lamelle.
 6. Observer :
    - **Phase contraste** : visualiser les cellules individuelles (objectif 60× ou 100×).
    - **Canal GFP** : excitation 470 nm, émission 525 nm. Expositions 50–200 ms.
@@ -352,7 +406,7 @@ Préparer 4 conditions TMG à partir de la culture lacUV5-GFP (ou Plac-GFP) en p
 4. *Analyze > Measure* : s'assurer que "Mean" est coché dans *Analyze > Set Measurements*.
 5. Exporter le tableau en CSV (*File > Save As > Results*).
 6. Nommer le fichier : `imagej_tmg_XXuM.csv` (remplacer XX par la concentration).
-7. Répéter pour les 4 conditions.
+7. Répéter pour les 4 conditions et les 2 souches.
 
 Ces CSV sont chargés dans le notebook induction Notebook C.
 
@@ -363,13 +417,13 @@ Ces CSV sont chargés dans le notebook induction Notebook C.
 
 ---
 
-## J9 — Jeudi S2 · Présentation finale
+## J9 — Jeudi S2 · Preparation rapport et/ou présentation
 
 **Durée** : ~20 min de présentation + 10 min de questions.
 
 ### Structure suggérée
 
-1. **Question biologique** (2 min) : pourquoi les bactéries régulent-elles l'opéron *lac* ?
+1. **Question biologique** (2 min) : comment les bactéries utilisent-elles différent nutriments ?
 2. **Expérience 1 : croissance** (5 min) : courbe de croissance, simulation stochastique, diauxie.
 3. **Expérience 2 : induction** (8 min) : courbes dose-réponse, courbe de Hill, comparaison Plac vs lacUV5.
 4. **[FACULTATIF]** Microscopie et bimodalité (3 min).
@@ -385,12 +439,17 @@ Ces CSV sont chargés dans le notebook induction Notebook C.
 
 ## Annexe 1 — Milieux et antibiotiques
 
+> Ces milieux sont préparés par le labo avant le stage.
+
 | Milieu | Composition | Stérilisation |
 |---|---|---|
 | LB liquide | 10 g/L NaCl, 10 g/L tryptone, 5 g/L extrait de levure | Autoclave 121 °C, 20 min |
 | LB + Kan50 | LB + kanamycine 50 µg/mL | Ajouter kanamycine après refroidissement (< 55 °C) |
 | LB gélosé | LB + agar 15 g/L | Autoclave, couler après refroidissement à ~55 °C |
 | LB gélosé + Kan50 | LB gélosé + kanamycine 50 µg/mL | Ajouter kanamycine avant coulage (< 55 °C) |
+| M9 Minimal Salts 5× | Disodium phosphate 33,9 g/L + KH₂PO₄ 15 g/L + NaCl 2,5 g/L + NH₄Cl 5 g/L | Autoclave 121 °C, 15 min |
+| M9 1× + glycérol 0,4 % | M9 5× : 200 mL + eau stérile : 750 mL + glycérol 50 % stérile : 8 mL + MgSO₄ 1 M stérile : 2 mL (± CaCl₂ 1 M : 0,1 mL) qsp 1 L | Dilution aseptique |
+| M9 + glycérol + Kan50 | M9 1× + glycérol 0,4 % + kanamycine 50 µg/mL | Ajouter Kan après assemblage |
 
 **Stock kanamycine** : 50 mg/mL dans eau ultra-pure, filtrer 0,22 µm, aliquoter 1 mL, stocker −20 °C.
 
@@ -419,38 +478,8 @@ Ces CSV sont chargés dans le notebook induction Notebook C.
 - Aliquoter 100 µL, stocker à −20 °C. Éviter les cycles gel/dégel répétés.
 - Mêmes concentrations finales recommandées que l'IPTG ; mêmes dilutions de travail.
 
----
-
-## Annexe 3 — [FACULTATIF] Protocole microscopie agar pads
-
-### Matériel
-- Agarose low-melting 1 % dans LB (ou PBS)
-- Lames de verre nettoyées + lamelles 0,17 mm (n°1.5)
-- Scotch double-face fin (optionnel, pour espacer les lames)
-- Cultures bactériennes en phase exponentielle (OD ~0,2–0,3)
-- Inducteurs TMG aux concentrations souhaitées
-
-### Protocole détaillé
-
-**Préparation de l'agar pad**
-1. Faire fondre l'agarose dans LB (microwave, 20–30 sec à pleine puissance, surveiller).
-2. Déposer 2 petits morceaux de scotch double-face sur la lame de verre (épaisseur ~0,2 mm pour écarter les lames).
-3. Couler ~30–40 µL d'agarose fondu refroidi (~50 °C) sur la lame.
-4. Appliquer une seconde lame immédiatement, en glissant perpendiculairement.
-5. Laisser solidifier 5 min à température ambiante.
-6. Séparer les lames en glissant — l'agar pad reste sur l'une des deux lames.
-
-**Dépôt des bactéries**
-7. Vortexer doucement la culture + inducteur (1h d'incubation préalable à 37 °C).
-8. Déposer 1–2 µL sur l'agar pad.
-9. Laisser sécher 30 sec à l'air (jusqu'à disparition du reflet de la goutte).
-10. Couvrir avec une lamelle propre.
-
-**Acquisition**
-11. Observer en phase contraste pour localiser les bactéries (objectif 60× ou 100×, huile).
-12. Basculer sur le canal GFP :
-    - Filtre d'excitation : 470/40 nm (ou Chroma ET470/40x)
-    - Filtre d'émission : 525/50 nm (ou Chroma ET525/50m)
-    - Temps d'exposition : 50–500 ms selon le niveau d'expression. Ajuster pour éviter la saturation.
-13. Acquérir phase contraste + GFP pour chaque champ. Enregistrer en `.tif` 16-bit.
-14. Collecter ≥ 5 champs par condition (≥ 50 cellules par champ pour avoir des statistiques).
+### Glycérol (stock 50 %)
+- Mélanger 50 g de glycérol pur + eau ultra-pure qsp 100 mL.
+- Filtrer sur 0,22 µm (ne **pas** autoclaver — le glycérol est hygroscopique).
+- Aliquoter 10 mL, stocker à température ambiante ou à 4 °C.
+- Pour M9 + glycérol 0,4 % (1 L) : ajouter **8 mL** de stock 50 %.
