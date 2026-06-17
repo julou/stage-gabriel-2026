@@ -51,6 +51,16 @@ Student versions (`*_stagiaire.ipynb`) contain commented-out instructions in pla
 executable code; the reference versions (`*_complet.ipynb`) contain full working code
 and can be shared with the student at the end of the internship.
 
+Prepare PDF files with:
+
+```
+pandoc 2_plan_experimental_stagiaire.md -o 2_plan_experimental_stagiaire.pdf --pdf-engine=xelatex --template eisvogel -V colorlinks=true   --include-in-header=../header.tex
+
+# for notebooks:
+jupyter nbconvert --to markdown 3_notebook_croissance_stagiaire.ipynb 
+pandoc 3_notebook_croissance_stagiaire.md -o 3_notebook_croissance_stagiaire.pdf --pdf-engine=xelatex --template eisvogel -V colorlinks=true   --include-in-header=../header.tex
+```
+
 ## Biological system
 
 - Organism: *Escherichia coli* MG1655

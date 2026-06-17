@@ -27,6 +27,12 @@
    - [OPTIONNEL] Mesure au nanodrop ou spectro pour quantifier.
 3. Discussion : quelle est la concentration dans le tube n°6 si le tube n°1 est à 1 mg/mL ?
 
+Utiliser la dilution en série pour mesurer la relation entre concentration bacterienne et DO600: 
+   - Préparer 6 dilutions ×10 successives d'une culture de nuit dans du MgSO4 10mM (1 → 1:10⁶) dans des Eppendorf de 1,5 mL. Volume final = 900 µL à chaque étape.
+   - Mesure au spectro.
+   - Tracer DO600 vs concentration relative, en utilisant une echelle log-log.
+
+
 ### Après-midi — inoculation tubes stériles vs non stériles
 
 4. Préparer 6 tubes de 14 mL avec 3 mL LB chacun :
@@ -141,28 +147,26 @@ Ne pas interrompre les mesures pour la programmation — avancer au rythme des p
 
 | Condition | Concentration finale | Stock utilisé |
 |---|---|---|
-| Glucose seul | 0,02 % / 0,2 % / 0,4 % | Glucose 20 % : 0,2 µL / 2 µL / 4 µL dans 200 µL M9 |
-| Lactose seul | 0,02% / 0,2 % | Lactose 20 % : 0.2 µL / 2 µL dans 200 µL M9 |
-| Glu 0,02 % + Lac 0,2 % |   | 0.2 µL glu + 2 µL lac dans 200 µL M9 |
-| Glu 0,2 % + Lac 0,2 % |   | 2 µL glu + 2 µL lac dans 200 µL M9 |
-| Blanc (M9 seul) | — | M9 pur |
+| Glucose seul | 0,02 % / 0,1 % / 0,2 % | Glucose 20 % : 1 µL / 5 µL / 10 µL dans 1 mL M9 |
+| Lactose seul | 0,02% / 0,1 % | Lactose 20 % : 1 µL / 5 µL dans 1 mL M9 |
+| Glu 0,02 % + Lac 0,1 % |   | 1 µL glu + 5 µL lac dans 200 µL M9 |
+| Glu 0,2 % + Lac 0,1 % |   | 5 µL glu + 5 µL lac dans 200 µL M9 |
+| Blanc (M9 0,2% glucose, pour controle contamination) | — | Glucose 20 % : 10 µL dans 1 mL M9 |
 
 ### Layout de la plaque diauxie
-
-Règle : laisser Row A, Row F–H et Col 1, Col 5 (séparateur), Col 9–12 vides.
-Chaque condition : 3 réplicats en colonnes consécutives.
+Règle : laisser les bordures (Row A, Row F–H, Col 1, Col 10–12) vides.
 
 ```
-           Col 1   Col 2        Col 3        Col 4       Col 5   Col 6             Col 7             Col 8        Col 9–12
-Row A      vide    vide         vide         vide        vide    vide              vide              vide         vide
-Row B      vide    Glu 0,02 %   Glu 0,02 %   Glu 0,02 %  vide    Lac 0,02 %        Lac 0,02 %        Lac 0,02 %   vide
-Row C      vide    Glu 0,2 %    Glu 0,2 %    Glu 0,2 %   vide    Lac 0,2 %         Lac 0,2 %         Lac 0,2 %    vide
-Row D      vide    Glu 0,4 %    Glu 0,4 %    Glu 0,4 %   vide    Glu0,02+Lac0,2 %  Glu0,02+Lac0,2 %  Glu0,02+Lac0,2 %  vide
-Row E      vide    Blanc M9     Blanc M9     Blanc M9    vide    Glu0,2+Lac0,2 %   Glu0,2+Lac0,2 %   Glu0,2+Lac0,2 %   vide
-Row F–H    vide    vide         vide         vide        vide    vide              vide              vide         vide
+           Col 2        Col 3       Col 4   Col 5  Col 6             Col 7             Col 8   Col 9
+Row B      Glu 0,02 %   Glu 0,02 %  2nd biol repl  Lac 0,02 %        Lac 0,02 %        2nd biol repl
+Row C      Glu 0,1 %    Glu 0,1 %   2nd biol repl  Lac 0,1 %         Lac 0,1 %         2nd biol repl
+Row D      Glu 0,2 %    Glu 0,2 %   2nd biol repl  Glu0,02+Lac0,1 %  Glu0,02+Lac0,1 %  2nd biol repl
+Row E      Blanc M9     Blanc M9    2nd biol repl  Glu0,1+Lac0,1 %   Glu0,1+Lac0,1 %   2nd biol repl
 ```
 
-8 conditions × 3 réplicats = 24 puits. Blancs en Row E Col 2–4.
+> 2 réplicats techniques x 2 réplicats biologiques par condition + 4 blancs. Peut être adapté.
+
+8 conditions × 4 réplicats = 32 puits.
 
 ### Protocole d'inoculation
 

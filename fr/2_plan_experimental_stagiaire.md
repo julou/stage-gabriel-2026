@@ -31,6 +31,13 @@ Matériel sur la paillasse : pipettes P20, P200, P1000 + cônes · 10 tubes Eppe
 
 > Si le tube 6 est encore très coloré : une erreur s'est produite. Recommencer.
 
+**Exercice — utiliser la densité optique pour mesure la concentration bactérienne**
+Utiliser la dilution en série pour mesurer la relation entre concentration bactérienne et DO600: 
+1. Préparer 6 dilutions ×10 successives d'une culture de nuit dans du MgSO4 10mM (1 → 1:10⁶) dans des Eppendorf de 1,5 mL. Volume final = 900 µL à chaque étape.
+2. Mesure au spectro.
+3. Tracer DO600 vs concentration relative, en utilisant une echelle log-log. Dans quelle gamme de DO la relation est-elle linéaire?
+
+
 ### Après-midi — Inoculation tubes stériles vs non stériles ✓ / ⚠️
 
 > **Ce que "stérile" signifie vraiment** : l'air de cette pièce contient des centaines de bactéries et spores
@@ -152,27 +159,27 @@ En fin d'après-midi : préparer 1 tube 14 mL avec 3 mL M9 + glycérol 0,4 %, in
 
 ### Préparation des milieux ⚠️ (Thomas prépare les stocks)
 
-| Condition | Volume à ajouter dans 200 µL M9 |
+| Condition | Volume pour 1mL M9 |
 |---|---|
-| Glucose 0,02 % | 0,2 µL glucose 20 % |
-| Glucose 0,2 % | 2 µL glucose 20 % |
-| Glucose 0,4 % | 4 µL glucose 20 % |
-| Lactose 0,02 % | 0,2 µL lactose 20 % |
-| Lactose 0,2 % | 2 µL lactose 20 % |
-| Glu 0,02 % + Lac 0,2 % | 0,2 µL glu + 2 µL lac dans 200 µL M9 |
-| Glu 0,2 % + Lac 0,2 % | 2 µL glu + 2 µL lac dans 200 µL M9 |
-| Blanc M9 | M9 pur |
+| Glucose 0,02 % | 1 µL glucose 20 % |
+| Glucose 0,1 % | 5 µL glucose 20 % |
+| Glucose 0,2 % | 10 µL glucose 20 % |
+| Lactose 0,02 % | 1 µL lactose 20 % |
+| Lactose 0,1 % | 5 µL lactose 20 % |
+| Glu 0,02 % + Lac 0,1 % | 1 µL glu + 5 µL lac |
+| Glu 0,1 % + Lac 0,1 % | 5 µL glu + 5 µL lac |
+| Blanc M9 | M9 + 10 µL glucose 20 % |
 
 ### Layout de la plaque ✓
 
-Règle : laisser les bordures (Row A, Row F–H, Col 1, Col 9–12) et le séparateur (Col 5) vides.
+Règle : laisser les bordures (Row A, Row F–H, Col 1, Col 10–12) et le séparateur (Col 5) vides.
 
 ```
-           Col 2        Col 3        Col 4      Col 6             Col 7             Col 8
-Row B      Glu 0,02 %   Glu 0,02 %   Glu 0,02 %  Lac 0,02 %        Lac 0,02 %        Lac 0,02 %
-Row C      Glu 0,2 %    Glu 0,2 %    Glu 0,2 %   Lac 0,2 %         Lac 0,2 %         Lac 0,2 %
-Row D      Glu 0,4 %    Glu 0,4 %    Glu 0,4 %   Glu0,02+Lac0,2 %  Glu0,02+Lac0,2 %  Glu0,02+Lac0,2 %
-Row E      Blanc M9     Blanc M9     Blanc M9    Glu0,2+Lac0,2 %   Glu0,2+Lac0,2 %   Glu0,2+Lac0,2 %
+           Col 2        Col 3       Col 4   Col 5  Col 6             Col 7             Col 8   Col 9
+Row B      Glu 0,02 %   Glu 0,02 %  2nd biol repl  Lac 0,02 %        Lac 0,02 %        2nd biol repl
+Row C      Glu 0,1 %    Glu 0,1 %   2nd biol repl  Lac 0,1 %         Lac 0,1 %         2nd biol repl
+Row D      Glu 0,2 %    Glu 0,2 %   2nd biol repl  Glu0,02+Lac0,1 %  Glu0,02+Lac0,1 %  2nd biol repl
+Row E      Blanc M9     Blanc M9    2nd biol repl  Glu0,1+Lac0,1 %   Glu0,1+Lac0,1 %   2nd biol repl
 ```
 
 ### Protocole d'inoculation ✓ / ⚠️
